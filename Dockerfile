@@ -1,6 +1,6 @@
 FROM jenkins
 # Add Android SDK
-RUN wget --progress=dot:giga http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
+RUN wget --progress=dot:giga https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
 RUN mv android-sdk_r24.4.1-linux.tgz /opt/
 RUN cd /opt && tar xzvf ./android-sdk_r24.4.1-linux.tgz
 ENV ANDROID_HOME /opt/android-sdk-linux
