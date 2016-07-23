@@ -1,4 +1,4 @@
-FROM jenkins
+FROM jenkins:alpine
 # Add Android SDK
 USER root
 RUN wget https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
