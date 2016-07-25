@@ -1,11 +1,14 @@
 FROM jenkins
 # Add Android SDK
 USER root
-RUN apt-get update && apt-get install -y lib32stdc++6 lib32z1
-ADD https://services.gradle.org/distributions/gradle-2.4-all.zip $JENKINS_HOME
-RUN unzip $JENKINS_HOME/gradle-2.4-all.zip -d $JENKINS_HOME/gradle
-ENV GRADLE_HOME $JENKINS_HOME/gradle/gradle-2.4-all
-ENV PATH $GRADLE_HOME/bin:$PATH
+RUN apt-get update && apt-get install -y git-core gnupg flex bison gperf build-essential \
+  zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 \
+  lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache \
+  libgl1-mesa-dev libxml2-utils xsltproc unzip
+# ADD https://services.gradle.org/distributions/gradle-2.4-all.zip $JENKINS_HOME
+# RUN unzip $JENKINS_HOME/gradle-2.4-all.zip -d $JENKINS_HOME/gradle
+# ENV GRADLE_HOME $JENKINS_HOME/gradle/gradle-2.4-all
+# ENV PATH $GRADLE_HOME/bin:$PATH
 # RUN wget https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
 # RUN mv android-sdk_r24.4.1-linux.tgz /opt/
 # RUN cd /opt && tar xzvf ./android-sdk_r24.4.1-linux.tgz
