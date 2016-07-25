@@ -16,7 +16,7 @@ ENV ANDROID_HOME $JENKINS_HOME/android-sdk-linux
 ENV PATH $ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 # RUN echo $PATH
 # RUN echo "y" | android update sdk -u --filter platform-tools,android-22,android-23,build-tools-23.0.2,build-tools-23.0.3,addon-google_apis-google-23,extra-android-m2repository,extra-google-m2repository,extra-google-google_play_services
-RUN chmod -R 755 $ANDROID_HOME
+# RUN chmod -R 755 $ANDROID_HOME
 USER jenkins
 # if we want to install via apt
 # USER root
