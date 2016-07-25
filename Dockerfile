@@ -1,7 +1,7 @@
 FROM jenkins
 # Add Android SDK
 USER root
-RUN apt-get install lib32stdc++6 lib32z1
+RUN apt-get update && apt-get install -y lib32stdc++6 lib32z1
 # RUN wget https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
 # RUN mv android-sdk_r24.4.1-linux.tgz /opt/
 # RUN cd /opt && tar xzvf ./android-sdk_r24.4.1-linux.tgz
